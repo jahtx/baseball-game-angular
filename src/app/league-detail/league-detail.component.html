@@ -1,0 +1,57 @@
+<div class="generalContainer leagueProfile">
+  <ngx-spinner></ngx-spinner>
+  <section *ngIf="isLoaded">
+    <div class="actionArea">
+      <a mat-raised-button [routerLink]="['/league']">Manage Leagues</a>
+    </div>
+
+    <div class="leagueProfile__profileImg"></div>
+    <div class="name">{{ league.leagueName }}</div>
+    <div class="standardTableRow">
+      <div class="standardTableRow__labelSection">
+        Alias:
+      </div>
+      {{ league.alias }}
+    </div>
+    <div class="standardTableRow">
+      <div class="standardTableRow__labelSection">
+        Description:
+      </div>
+      {{ league.description }}
+    </div>
+    <div class="standardTableRow">
+      <div class="standardTableRow__labelSection">
+        Mantra:
+      </div>
+      {{ league.mantra }}
+    </div>
+    <div class="standardTableRow">
+      <div class="standardTableRow__labelSection">
+        Zip Code:
+      </div>
+      {{ league.zipCode }}
+    </div>
+
+    <br />
+    <div class="generalForm__actionArea">
+      <button
+        mat-raised-button
+        class="generalForm__button"
+        mat-raised-button
+        color="primary"
+        [routerLink]="['/league-edit/', league.leagueId]"
+      >
+        Edit
+      </button>
+      <button
+        class="generalForm__button"
+        type="button"
+        mat-raised-button
+        color="warn"
+        (click)="deleteLeague(league.leagueId)"
+      >
+        Delete
+      </button>
+    </div>
+  </section>
+</div>

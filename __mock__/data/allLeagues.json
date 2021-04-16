@@ -1,0 +1,155 @@
+[
+  {
+    "leagueId": 47,
+    "alias": "bigdogAliasRQ",
+    "active": true,
+    "zipCode": "78909",
+    "leagueName": "MOCK",
+    "description": "Now is the summer of our discontent.",
+    "mantra": "Never give up. Never surrender."
+  },
+  {
+    "leagueId": 48,
+    "alias": "injuredHeads",
+    "active": true,
+    "zipCode": "34523",
+    "leagueName": "Injured Head and Shoulders",
+    "description": "Tri-tip ham short ribs, t-bone landjaeger shank venison chuck picanha",
+    "mantra": "It's just turtles all the way down."
+  },
+  {
+    "leagueId": 49,
+    "alias": "bringItOn",
+    "active": true,
+    "zipCode": "78259",
+    "leagueName": "Bring It On",
+    "description": "Bacon ipsum dolor amet ham buffalo capicola tongue",
+    "mantra": "dont pay the ferryman"
+  },
+  {
+    "leagueId": 50,
+    "alias": "leagueOfOurOwn",
+    "active": true,
+    "zipCode": "4324",
+    "leagueName": "League of Our Own",
+    "description": "Frankfurter corned beef pork chop shankle, ham fatback ground round sirloin swine",
+    "mantra": "may the force be with you"
+  },
+  {
+    "leagueId": 51,
+    "alias": "weekendWarriors",
+    "active": true,
+    "zipCode": null,
+    "leagueName": "Weekend Warriors",
+    "description": "bacon beef ribs tenderloin alcatra, salami kielbasa tail shank cow corned beef meatball tri-tip",
+    "mantra": "its all the same"
+  },
+  {
+    "leagueId": 52,
+    "alias": "unusualSuspects",
+    "active": true,
+    "zipCode": null,
+    "leagueName": "The Unusual Suspects",
+    "description": "Pork belly pig cow, brisket jowl pork loin bacon shoulder swine strip steak buffalo jerky.",
+    "mantra": "seize the day"
+  },
+  {
+    "leagueId": 53,
+    "alias": "noGutsNoGlory",
+    "active": true,
+    "zipCode": "34234",
+    "leagueName": "No Guts No Glory",
+    "description": "Chuck boudin meatloaf, sausage alcatra spare ribs cow bacon jowl tongue. Frankfurter swine tongue pork loin rump pancetta tenderloin pig kevin strip steak chuck turkey leberkas salami",
+    "mantra": "know when to hold em, know when to fold em"
+  },
+  {
+    "leagueId": 54,
+    "alias": "injuredHeads",
+    "active": true,
+    "zipCode": null,
+    "leagueName": "Injured Head and Shoulders",
+    "description": "Tri-tip ham short ribs, t-bone landjaeger shank venison chuck picanha",
+    "mantra": "I will survive"
+  },
+  {
+    "leagueId": 55,
+    "alias": "bringItOn",
+    "active": true,
+    "zipCode": null,
+    "leagueName": "Bring It On",
+    "description": "Bacon ipsum dolor amet ham buffalo capicola tongue",
+    "mantra": "dont pay the ferryman"
+  },
+  {
+    "leagueId": 56,
+    "alias": "leagueOfOurOwn",
+    "active": true,
+    "zipCode": null,
+    "leagueName": "League of Our Own",
+    "description": "Frankfurter corned beef pork chop shankle, ham fatback ground round sirloin swine",
+    "mantra": "its all the same"
+  },
+  {
+    "leagueId": 57,
+    "alias": "weekendWarriors",
+    "active": true,
+    "zipCode": null,
+    "leagueName": "Weekend Warriors",
+    "description": "bacon beef ribs tenderloin alcatra, salami kielbasa tail shank cow corned beef meatball tri-tip",
+    "mantra": "its all the same"
+  },
+  {
+    "leagueId": 58,
+    "alias": "unusualSuspects",
+    "active": true,
+    "zipCode": null,
+    "leagueName": "The Unusual Suspects",
+    "description": "Pork belly pig cow, brisket jowl pork loin bacon shoulder swine strip steak buffalo jerky.",
+    "mantra": "seize the day"
+  },
+  {
+    "leagueId": 59,
+    "alias": "noGutsNoGlory",
+    "active": true,
+    "zipCode": null,
+    "leagueName": "No Guts No Glory",
+    "description": "Chuck boudin meatloaf, sausage alcatra spare ribs cow bacon jowl tongue. Frankfurter swine tongue pork loin rump pancetta tenderloin pig kevin strip steak chuck turkey leberkas salami",
+    "mantra": "know when to hold em, know when to fold em"
+  },
+  {
+    "leagueId": 60,
+    "alias": "quietRiot2342",
+    "active": true,
+    "zipCode": null,
+    "leagueName": "Quiet Riot",
+    "description": "We are crazy now",
+    "mantra": "wild wild wild"
+  },
+  {
+    "leagueId": 61,
+    "alias": "winOrBooze",
+    "active": true,
+    "zipCode": "32423",
+    "leagueName": "Win or Booze",
+    "description": "Tri-tip ham short ribs, t-bone landjaeger shank venison chuck picanha",
+    "mantra": "Accept who you are. Unless you’re a serial killer."
+  },
+  {
+    "leagueId": 62,
+    "alias": "cerealKillers23423",
+    "active": true,
+    "zipCode": "67890",
+    "leagueName": "Cereal Killers",
+    "description": "I travel all night just to get back home.",
+    "mantra": "On a steel horse I ride."
+  },
+  {
+    "leagueId": 63,
+    "alias": "motley234234",
+    "active": true,
+    "zipCode": "78902",
+    "leagueName": "The Motley Crew",
+    "description": "Lorem ipso facto.",
+    "mantra": "Good Grief!"
+  }
+]

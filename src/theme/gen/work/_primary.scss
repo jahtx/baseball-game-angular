@@ -1,0 +1,123 @@
+html {
+  background-color: $light-grey;
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  font-family: "Roboto", sans-serif;
+}
+
+h1,
+h2 {
+  font-family: source-sans-pro;
+  text-transform: uppercase;
+}
+
+a {
+  text-decoration: none;
+}
+
+.mainHeader {
+  height: 4rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  position: relative;
+  z-index: 20;
+  background-color: $main-green;
+  font-family: source-sans-pro;
+  letter-spacing: 4px;
+
+  &__center {
+    width: 60%;
+    text-align: center;
+  }
+
+  &__title {
+    a {
+      color: #fff;
+      font-weight: bold;
+      text-align: center;
+    }
+  }
+}
+
+.heroBin {
+  margin-top: 10px;
+  background-position: center center;
+  background-repeat: no-repeat;
+  height: 200px;
+
+  &-home {
+    background-size: contain;
+    background-image: url(gen-img/baseball.png);
+  }
+}
+
+.heading {
+  text-align: center;
+}
+
+.bin {
+  font-size: 0.9em;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 1.2rem;
+
+  &__actionSheet {
+    text-align: center;
+  }
+  &-cardStack {
+    @include MQ(M) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+    }
+  }
+}
+
+.bottomArea {
+  height: 3rem;
+}
+
+.fa-calendar:before {
+  content: "\f133";
+}
+
+.alert {
+  margin: 1em 0 0 0;
+  position: relative;
+  padding: 0.75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+}
+.alert-dark {
+  color: #1b1e21;
+  background-color: #d6d8d9;
+  border-color: #c6c8ca;
+}
+.alert-warning {
+  color: #856404;
+  background-color: #fff3cd;
+  border-color: #ffeeba;
+}
+
+.actualHeading {
+  float: left;
+}
+.headingActionBar {
+  float: right;
+  line-height: 4.5em;
+  a {
+    text-decoration: underline;
+  }
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}

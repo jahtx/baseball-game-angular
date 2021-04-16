@@ -1,0 +1,41 @@
+@mixin b {
+  // box-shadow: inset 0px 0px 0px 1px $light-grey;
+}
+
+@mixin flex_center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@mixin margin_center {
+  margin: 0 auto;
+} // basic
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.group:before,
+.group:after {
+  content: "";
+  display: table;
+}
+
+.group:after {
+  clear: both;
+}
+
+.group {
+  zoom: 1;
+  // /* For IE 6/7 (trigger hasLayout) */
+}

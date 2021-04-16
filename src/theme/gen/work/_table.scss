@@ -1,0 +1,203 @@
+/* Variables
+================================== */
+/* Tables
+================================== */
+.rtable {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 0 0.5em 0;
+
+  @include MQ(T) {
+    margin: 0 0 3em 0;
+  }
+
+  padding: 0;
+}
+.rtable-cell {
+  box-sizing: border-box;
+  flex-grow: 1;
+  width: 100%;
+  padding: 0.8em 1.2em;
+  overflow: hidden;
+  list-style: none;
+  border: solid 3px white;
+  background: rgba(112, 128, 144, 0.2);
+}
+.rtable-cell > h1,
+.rtable-cell > h2,
+.rtable-cell > h3,
+.rtable-cell > h4,
+.rtable-cell > h5,
+.rtable-cell > h6 {
+  margin: 0;
+}
+/* Table column sizing
+  ================================== */
+.rtable--2cols > .rtable-cell {
+  width: 50%;
+}
+.rtable--3cols > .rtable-cell {
+  width: 33.33%;
+}
+.rtable--4cols > .rtable-cell {
+  width: 25%;
+}
+.rtable--5cols > .rtable-cell {
+  width: 20%;
+}
+.rtable--6cols > .rtable-cell {
+  width: 16.6%;
+}
+
+/* Apply styles
+  ================================== */
+.rtable {
+  position: relative;
+  top: 3px;
+  left: 3px;
+}
+.rtable-cell {
+  margin: -3px 0 0 -3px;
+  background-color: white;
+  border-color: #e2e6e9;
+}
+/* Cell styles
+  ================================== */
+.rtable-cell--dark {
+  background-color: slategrey;
+  border-color: #5a6673;
+  color: white;
+}
+.rtable-cell--dark > h1,
+.rtable-cell--dark > h2,
+.rtable-cell--dark > h3,
+.rtable-cell--dark > h4,
+.rtable-cell--dark > h5,
+.rtable-cell--dark > h6 {
+  color: white;
+}
+.rtable-cell--medium {
+  background-color: #b8c0c8;
+  border-color: #a9b3bc;
+}
+.rtable-cell--light {
+  background-color: white;
+  border-color: #e2e6e9;
+}
+.rtable-cell--highlight {
+  background-color: lightgreen;
+  border-color: #64e764;
+}
+.rtable-cell--alert {
+  background-color: darkorange;
+  border-color: #cc7000;
+  color: white;
+}
+.rtable-cell--alert > h1,
+.rtable-cell--alert > h2,
+.rtable-cell--alert > h3,
+.rtable-cell--alert > h4,
+.rtable-cell--alert > h5,
+.rtable-cell--alert > h6 {
+  color: white;
+}
+.rtable-cell--head {
+  background-color: slategrey;
+  border-color: #5a6673;
+  color: white;
+}
+.rtable-cell--head > h1,
+.rtable-cell--head > h2,
+.rtable-cell--head > h3,
+.rtable-cell--head > h4,
+.rtable-cell--head > h5,
+.rtable-cell--head > h6 {
+  color: white;
+}
+.rtable-cell--foot {
+  background-color: #fff;
+}
+/* Responsive
+  ==================================== */
+@include MQ(T) {
+  .rtable--collapse {
+    display: block;
+  }
+  .rtable--collapse > .rtable-cell {
+    width: 100% !important;
+  }
+  .rtable--collapse > .rtable-cell--foot {
+    margin-bottom: 1em;
+  }
+}
+.no-flexbox .rtable {
+  display: block;
+}
+.no-flexbox .rtable > .rtable-cell {
+  width: 100%;
+}
+.no-flexbox .rtable > .rtable-cell--foot {
+  margin-bottom: 1em;
+}
+@include MQ(T) {
+  .hiddenSmall {
+    display: none;
+  }
+}
+
+/* Accordion Styling
+  ==================================== */
+.Accordion {
+  position: relative;
+  top: -3px;
+  left: -3px;
+  width: 100%;
+  margin: 0 0 0.5em 0;
+  padding: 0.6em 0.6em 0.6em 2em;
+  border-radius: 0.5em;
+  text-align: left;
+  border: solid 3px $dark-green;
+  background-color: $button-green;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  transition: background-color 0.1s;
+  cursor: pointer;
+}
+@media all and (min-width: 502px) {
+  .Accordion {
+    display: none;
+  }
+}
+.Accordion:hover,
+.Accordion:focus {
+  outline: none;
+  -webkit-filter: contrast(120%);
+  filter: contrast(120%);
+}
+.Accordion[aria-selected="true"] {
+  margin-bottom: 0;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+  border-bottom-width: 0;
+  background: $light-green;
+  color: $dark-green;
+}
+.Accordion:before {
+  content: "+";
+  position: absolute;
+  top: 50%;
+  left: 0.3em;
+  margin-top: -1.14285714em;
+  font-weight: normal;
+  font-size: 2em;
+  line-height: 2em;
+  background-size: 2em 2em;
+}
+.Accordion[aria-selected="true"]:before {
+  content: "-";
+}
+.js-rtableTabs,
+.js-rtableAccordions {
+  min-width: 240px;
+}

@@ -1,0 +1,87 @@
+<div class="generalContainer playerProfile">
+  <ngx-spinner></ngx-spinner>
+  <section *ngIf="isLoaded">
+    <div *ngIf="isLoaded" class="actionArea">
+      <a mat-raised-button [routerLink]="['/player']">Manage Players</a>
+    </div>
+
+    <div class="playerProfile__profileImg"></div>
+    <div class="name">{{ player.firstName }}&nbsp;{{ player.lastName }}</div>
+    <div class="standardTableRow">
+      <div class="standardTableRow__labelSection">
+        Favorite Team:
+      </div>
+      {{ player.favoriteTeam }}
+    </div>
+    <div class="standardTableRow">
+      <div class="standardTableRow__labelSection">
+        Hated Team:
+      </div>
+      {{ player.hatedTeam }}
+    </div>
+    <div class="standardTableRow">
+      <div class="standardTableRow__labelSection">
+        At Bat Song:
+      </div>
+      {{ player.atBatSong }}
+    </div>
+    <div class="standardTableRow">
+      <div class="standardTableRow__labelSection">
+        Date of Birth:
+      </div>
+      {{ player.dateOfBirth }}
+    </div>
+    <div class="standardTableRow">
+      <div class="standardTableRow__labelSection">
+        Email:
+      </div>
+      {{ player.email }}
+    </div>
+    <div class="standardTableRow">
+      <div class="standardTableRow__labelSection">
+        City:
+      </div>
+      {{ player.city }}
+    </div>
+    <div class="standardTableRow">
+      <div class="standardTableRow__labelSection">
+        State:
+      </div>
+      {{ player.state }}
+    </div>
+    <div class="standardTableRow">
+      <div class="standardTableRow__labelSection">
+        Country:
+      </div>
+      {{ player.country }}
+    </div>
+    <div class="standardTableRow">
+      <div class="standardTableRow__labelSection">
+        Zip Code:
+      </div>
+      {{ player.zipCode }}
+    </div>
+
+    <br />
+    <div class="generalForm__actionArea">
+      <button
+        mat-raised-button
+        class="generalForm__button"
+        mat-raised-button
+        color="primary"
+        [routerLink]="['/player-edit/', player.playerId]"
+      >
+        Edit
+      </button>
+      <button
+        class="generalForm__button"
+        type="button"
+        mat-raised-button
+        color="warn"
+        (click)="deletePlayer(player.playerId)"
+      >
+        Delete
+      </button>
+    </div>
+  </section>
+</div>

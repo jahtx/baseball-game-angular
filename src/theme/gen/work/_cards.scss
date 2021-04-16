@@ -1,0 +1,52 @@
+.card {
+  margin-top: 1em;
+  width: 100%; // /* Set width of cards */
+  border: 1px solid #757575; // /* Set up Border */
+  border-radius: 4px; // /* Slightly Curve edges */
+  overflow: hidden; // /* Fixes the corners */
+  display: flex;
+  font-size: 0.9em;
+  //* Children use Flexbox */
+  flex-direction: column; // /* Rotate Axis */
+  @include MQ(M) {
+    width: 45%;
+  }
+  &__header {
+    color: #141414;
+    text-align: center;
+    font-size: 1em;
+    font-weight: 600;
+    border-bottom: 1px solid #757575;
+    background-color: #dfdfdf;
+    padding: 5px 10px;
+  }
+  &__main {
+    display: flex; // /* Children use Flexbox */
+    flex-direction: column; // /* Rotate Axis to Vertical */
+    justify-content: flex-start; // /* Group Children in Center */
+    padding: 1rem 1rem; // /* Add padding to the top/bottom */
+  }
+  &__top {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    flex-direction: row;
+    margin: 0 0 0.5em 0;
+  }
+  &__rightSection {
+    margin: 0 0 0 2em;
+  }
+
+  &__icon {
+    width: 3.5em;
+  }
+  &__label {
+    font-weight: bold;
+  }
+}
+
+.main-description {
+  display: flex;
+  color: #d32f2f;
+  font-size: 12px;
+}

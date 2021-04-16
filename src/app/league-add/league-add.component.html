@@ -1,0 +1,90 @@
+<div class="generalContainer">
+  <div class="actionArea">
+    <a mat-raised-button [routerLink]="['/league']">Manage Leagues</a>
+  </div>
+  <form class="generalForm" [formGroup]="leagueForm" (ngSubmit)="onFormSubmit(leagueForm.value)">
+    <input type="hidden" formControlName="leagueId" />
+
+    <mat-form-field appearance="outline">
+      <mat-label>League Name</mat-label>
+      <input matInput formControlName="leagueName" />
+      <mat-error *ngFor="let validation of validationMessages.leagueName">
+        <mat-error
+          class="error-message"
+          *ngIf="
+            leagueForm.get('leagueName').hasError(validation.type) &&
+            (leagueForm.get('leagueName').dirty || leagueForm.get('leagueName').touched)
+          "
+        >
+          {{ validation.message }}
+        </mat-error>
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Alias</mat-label>
+      <input matInput formControlName="alias" />
+      <mat-error *ngFor="let validation of validationMessages.alias">
+        <mat-error
+          class="error-message"
+          *ngIf="
+            leagueForm.get('alias').hasError(validation.type) &&
+            (leagueForm.get('alias').dirty || leagueForm.get('alias').touched)
+          "
+        >
+          {{ validation.message }}
+        </mat-error>
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Description</mat-label>
+      <textarea matInput formControlName="description" rows="4"></textarea>
+
+      <mat-error *ngFor="let validation of validationMessages.description">
+        <mat-error
+          class="error-message"
+          *ngIf="
+            leagueForm.get('description').hasError(validation.type) &&
+            (leagueForm.get('description').dirty || leagueForm.get('description').touched)
+          "
+        >
+          {{ validation.message }}
+        </mat-error>
+      </mat-error>
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+      <mat-label>Mantra</mat-label>
+      <input matInput formControlName="mantra" />
+      <mat-error *ngFor="let validation of validationMessages.mantra">
+        <mat-error
+          class="error-message"
+          *ngIf="
+            leagueForm.get('mantra').hasError(validation.type) &&
+            (leagueForm.get('mantra').dirty || leagueForm.get('mantra').touched)
+          "
+        >
+          {{ validation.message }}
+        </mat-error>
+      </mat-error>
+    </mat-form-field>
+
+    <!--<input matInput formControlName="active"/>-->
+    <mat-slide-toggle color="primary" formControlName="active">Active</mat-slide-toggle>
+    <br /><br />
+    <mat-form-field appearance="outline">
+      <mat-label>Zip Code</mat-label>
+
+      <input matInput formControlName="zipCode" />
+    </mat-form-field>
+    <div class="generalForm__actionArea">
+      <button
+        class="generalForm__button"
+        mat-raised-button
+        color="primary"
+        type="submit"
+        [disabled]="!leagueForm.dirty || !leagueForm.valid"
+      >
+        Add
+      </button>
+    </div>
+  </form>
+</div>

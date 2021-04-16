@@ -1,0 +1,25 @@
+<div class="generalContainer generalContainer-leagueList">
+  {{ message }}
+  <!--<h1 class="heading mainTitle" translate>APP_NAME</h1>-->
+  <div *ngIf="isLoaded" class="actionArea">
+    <a mat-raised-button [routerLink]="['/league-add']">Add League</a>
+  </div>
+  <div *ngIf="!data?.length && isLoaded">
+    No Players Found
+  </div>
+  <br />
+  <ngx-spinner></ngx-spinner>
+
+  <mat-card *ngFor="let league of data; let i = index" [routerLink]="['/league-detail/', league.leagueId]">
+    <mat-card-title>
+      {{ league.leagueName }}
+    </mat-card-title>
+    <mat-card-content>
+      <!--<mat-icon>code</mat-icon>-->
+
+      <span class="card__label">Mantra: </span>&nbsp;
+      <span>{{ league.mantra }}</span>
+      <br />
+    </mat-card-content>
+  </mat-card>
+</div>

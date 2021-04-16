@@ -1,0 +1,18 @@
+{
+  "playerId": 194,
+  "username": "stein098098",
+  "firstName": "John",
+  "lastName": "Steinbeck",
+  "dateOfBirth": "1902-09-23",
+  "favoriteTeam": "Boston Red Sox",
+  "hatedTeam": "Boston Red Sox",
+  "email": "steinbeck@leaves.com",
+  "atBatSong": "More than a Feeling",
+  "city": "Boston",
+  "state": "Massachusetts",
+  "zipCode": "12310",
+  "country": "USA",
+  "active": true,
+  "createdDate": null,
+  "modifiedDate": "2020-03-05T21:30:47.000+0000"
+}

@@ -1,0 +1,115 @@
+.standardForm {
+  input,
+  textarea {
+    width: 100%;
+    border-top: 1px solid rgb(189, 182, 182);
+    border-left: 1px solid #ccc;
+    border-right: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+    &:focus {
+      outline: 0;
+      border-color: #4697e4;
+    }
+  }
+  &__req {
+    float: right;
+    color: $standard-red;
+    font-weight: bold;
+    font-size: 0.8em;
+  }
+  &__row {
+    clear: both;
+    overflow: hidden;
+    padding: 1px;
+    margin: 0 0 10px 0;
+  }
+
+  &__inputArea {
+    width: 100%;
+    float: right;
+    @include MQ(M) {
+      width: 75%;
+    }
+  }
+  &__desc {
+    width: 50%;
+    &--date {
+      width: auto;
+    }
+    float: left;
+    padding-right: 10px;
+    @include MQ(M) {
+      width: 25%;
+    }
+    @include MQ(L) {
+      text-align: right;
+    }
+  }
+
+  &__reqDesc {
+    width: 50%;
+    float: left;
+    padding-right: 10px;
+    @include MQ(M) {
+      width: 25%;
+      padding-top: 13px;
+    }
+    @include MQ(L) {
+      text-align: right;
+    }
+  }
+  &__fieldset {
+    border: 0;
+    padding: 0;
+    div {
+      width: 75%;
+      float: right;
+      div {
+        margin: 0 0 5px 0;
+      }
+    }
+  }
+  &__fieldsetLabel {
+    font-size: 90%;
+  }
+}
+
+input[type="text"],
+input[type="email"],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  resize: vertical;
+}
+@include MQ(S) {
+  .standardForm > div {
+    margin: 0 0 15px 0;
+  }
+  .standardForm > div > label,
+  legend {
+    width: 100%;
+    float: none;
+    margin: 0 0 5px 0;
+  }
+  .standardForm > div > div,
+  .standardForm > div > fieldset > div {
+    width: 100%;
+    float: none;
+  }
+  input[type="text"],
+  input[type="email"],
+  input[type="url"],
+  input[type="password"],
+  textarea,
+  select {
+    width: 100%;
+  }
+}
+
+.mainLabel {
+  font-weight: bold;
+}

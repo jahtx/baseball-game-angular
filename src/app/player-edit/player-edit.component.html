@@ -1,0 +1,132 @@
+<div class="generalContainer">
+  <ngx-spinner></ngx-spinner>
+  <section *ngIf="isLoaded">
+    <div class="actionArea">
+      <a mat-raised-button [routerLink]="['/player']">Manage Players</a>
+    </div>
+    <form class="generalForm" [formGroup]="playerForm" (ngSubmit)="onFormSubmit(playerForm.value)">
+      <input type="hidden" formControlName="playerId" />
+
+      <mat-form-field appearance="outline">
+        <mat-label>Username</mat-label>
+        <input matInput formControlName="username" />
+        <mat-error *ngFor="let validation of validationMessages.username">
+          <mat-error
+            class="error-message"
+            *ngIf="
+              playerForm.get('username').hasError(validation.type) &&
+              (playerForm.get('username').dirty || playerForm.get('username').touched)
+            "
+          >
+            {{ validation.message }}
+          </mat-error>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>First Name</mat-label>
+        <input matInput formControlName="firstName" />
+        <mat-error *ngFor="let validation of validationMessages.firstName">
+          <mat-error
+            class="error-message"
+            *ngIf="
+              playerForm.get('firstName').hasError(validation.type) &&
+              (playerForm.get('firstName').dirty || playerForm.get('firstName').touched)
+            "
+          >
+            {{ validation.message }}
+          </mat-error>
+        </mat-error>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Last Name</mat-label>
+        <input class="form-control" matInput formControlName="lastName" />
+        <mat-error *ngFor="let validation of validationMessages.lastName">
+          <mat-error
+            class="error-message"
+            *ngIf="
+              playerForm.get('lastName').hasError(validation.type) &&
+              (playerForm.get('lastName').dirty || playerForm.get('lastName').touched)
+            "
+          >
+            {{ validation.message }}
+          </mat-error>
+        </mat-error>
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <input matInput formControlName="dateOfBirth" [matDatepicker]="myDatepicker" />
+        <mat-datepicker-toggle matSuffix [for]="myDatepicker"></mat-datepicker-toggle>
+        <mat-datepicker ng-model="date" ng-model-options="{ timezone: 'UTC-6' }" #myDatepicker></mat-datepicker>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Email</mat-label>
+        <input matInput formControlName="email" />
+        <mat-error *ngFor="let validation of validationMessages.email">
+          <mat-error
+            class="error-message"
+            *ngIf="
+              playerForm.get('email').hasError(validation.type) &&
+              (playerForm.get('email').dirty || playerForm.get('email').touched)
+            "
+          >
+            {{ validation.message }}
+          </mat-error>
+        </mat-error>
+      </mat-form-field>
+      <br />
+      <mat-form-field appearance="outline">
+        <mat-label>Favorite Team</mat-label>
+        <mat-select formControlName="favoriteTeam">
+          <mat-option *ngFor="let team of teamNames" value="{{ team }}">{{ team }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Team I Love to Hate</mat-label>
+        <mat-select formControlName="hatedTeam">
+          <mat-option *ngFor="let team of teamNames" value="{{ team }}">{{ team }}</mat-option>
+        </mat-select>
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Your "At Bat" Song</mat-label>
+        <input matInput formControlName="atBatSong" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline">
+        <mat-label>City</mat-label>
+        <input matInput formControlName="city" />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>State</mat-label>
+        <input matInput formControlName="state" />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Country</mat-label>
+        <input matInput formControlName="country" />
+      </mat-form-field>
+      <mat-form-field appearance="outline">
+        <mat-label>Zip Code</mat-label>
+        <input matInput formControlName="zipCode" />
+      </mat-form-field>
+      <div class="generalForm__actionArea">
+        <button
+          class="generalForm__button"
+          mat-raised-button
+          color="primary"
+          type="submit"
+          [disabled]="!playerForm.dirty || !playerForm.valid"
+        >
+          Update
+        </button>
+        <button
+          class="generalForm__button"
+          type="button"
+          mat-raised-button
+          color="warn"
+          (click)="deletePlayer(player.playerId)"
+        >
+          Delete
+        </button>
+      </div>
+    </form>
+  </section>
+</div>

@@ -1,0 +1,32 @@
+.pageTrans .ng-enter {
+  transform: translateX(500px);
+  opacity: 0;
+
+  -webkit-transition: all 0.35s cubic-bezier(1, 0.01, 0, 0.99);
+  -moz-transition: all 0.35s cubic-bezier(1, 0.01, 0, 0.99);
+  -ms-transition: all 0.35s cubic-bezier(1, 0.01, 0, 0.99);
+  -o-transition: all 0.35s cubic-bezier(1, 0.01, 0, 0.99);
+  transition: all 0.35s cubic-bezier(1, 0.01, 0, 0.99);
+}
+
+.pageTrans .ng-enter-active {
+  transform: translateX(0px);
+  opacity: 1;
+}
+
+.pageTrans .ng-leave {
+  transform: translateX(0);
+
+  display: none;
+
+  -webkit-transition: all 0.35s cubic-bezier(1, 0.01, 0, 0.99);
+  -moz-transition: all 0.35s cubic-bezier(1, 0.01, 0, 0.99);
+  -ms-transition: all 0.35s cubic-bezier(1, 0.01, 0, 0.99);
+  -o-transition: all 0.35s cubic-bezier(1, 0.01, 0, 0.99);
+  transition: all 0.35s cubic-bezier(1, 0.01, 0, 0.99);
+}
+
+.pageTrans .ng-leave-active {
+  transform: translateX(500px);
+  opacity: 0;
+}

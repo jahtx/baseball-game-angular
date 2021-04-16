@@ -1,0 +1,34 @@
+<div class="generalContainer generalContainer-playerList">
+  {{ message }}
+  <!--<h1 class="heading mainTitle" translate>APP_NAME</h1>-->
+  <div *ngIf="isLoaded" class="actionArea">
+    <a mat-raised-button [routerLink]="['/player-add']">Add Player</a>
+  </div>
+  <div *ngIf="!data?.length && isLoaded">
+    No Players Found
+  </div>
+  <br />
+  <ngx-spinner></ngx-spinner>
+
+  <mat-card *ngFor="let player of data; let i = index" [routerLink]="['/player-detail/', player.playerId]">
+    <mat-card-title>
+      {{ player.firstName }}
+      {{ player.lastName }}
+    </mat-card-title>
+    <mat-card-content>
+      <!--<mat-icon>code</mat-icon>-->
+
+      <span class="card__label">Favorite Team: </span>&nbsp;
+      <span>{{ player.favoriteTeam }}</span>
+      <br />
+      <span class="card__label">Team I love to Hate:</span>&nbsp;
+      <span>{{ player.hatedTeam }}</span>
+      <br />
+      <span class="card__label">At Bat Song:</span>&nbsp;
+      <span>{{ player.atBatSong }}</span>
+      <br />
+      <span class="card__label">Date of Birth:</span>&nbsp;
+      <span>{{ player.dateOfBirth }}</span>
+    </mat-card-content>
+  </mat-card>
+</div>
